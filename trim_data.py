@@ -43,9 +43,9 @@ def load_sbp_data(filepath: str) -> str:
 def parse_cli_args() -> argparse.Namespace:
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-filepath", "-f", type=str, help="path to .sbp or .sbp.json file")
+    parser.add_argument("-filepath", "-f", type=str, help="path to .sbp or .sbp.json file", required=True)
     parser.add_argument(
-        "-tow", "-t", type=float, help="start time and end time in GPSTOW", nargs=2,
+        "-tow", "-t", type=float, help="start time and end time in GPSTOW", nargs=2, required=True
     )
 
     args = parser.parse_args()
@@ -139,7 +139,7 @@ def create_output_path(filepath: str, tow: list) -> Path:
     return outpath
 
 
-def main():
+def main() -> None:
     """
     trim_data.py - a utility for trimming sbp logs
     """
