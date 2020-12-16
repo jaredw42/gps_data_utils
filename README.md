@@ -13,7 +13,8 @@ GPS WEEK: 2134, TOW: 302417.0
 ```
 
 ## trim_data
-trims a large gnss data file to a smaller TOW range 
+trims a large gnss data file to a smaller TOW range. 
+
 doesnt handle the TOW rollover nicely right now. 
 
 ```
